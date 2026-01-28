@@ -1,0 +1,137 @@
+/* Variables para cambios rápidos de color */
+:root {
+    --primary-green: #27ae60;
+    --soft-blue: #3498db;
+    --dark-navy: #1a2a3a;
+    --text-gray: #546e7a;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--dark-navy);
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+    padding: 20px;
+}
+
+.hero-tag {
+    background: var(--primary-green);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+/* Botones */
+.btn {
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s transform;
+}
+
+.btn:hover { transform: translateY(-3px); }
+.btn-green { background: var(--primary-green); color: white; }
+.btn-blue { background: var(--soft-blue); color: white; }
+
+/* Grid de Proyectos */
+.container {
+    max-width: 1100px;
+    margin: -60px auto 60px;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+
+.card.software { border-top: 5px solid var(--primary-green); }
+.card.web { border-top: 5px solid var(--soft-blue); }
+
+.category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.soft-label { color: var(--primary-green); }
+.web-label { color: var(--soft-blue); }
+
+.tech-stack {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.tech-badge {
+    font-size: 0.7rem;
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Secciones Inferiores */
+.about {
+    padding: 100px 20px;
+    background: white;
+    text-align: center;
+}
+
+.about-content { max-width: 700px; margin: 0 auto; }
+
+.footer {
+    padding: 40px;
+    background: var(--dark-navy);
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
