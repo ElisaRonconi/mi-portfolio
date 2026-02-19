@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elisa Ronconi | Software Dev & QA</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-16x16.png">
 </head>
 <body>
-
-    <header class="hero">
-        <span class="hero-tag">#OpenToWork</span>
-        <h1>Elisa Ronconi</h1>
-        <p class="subtitle">
-            Analista y Desarrolladora de Software con formación técnica en PHP y SQL. 
-            Especialista en QA y optimización de procesos.
+<header class="hero">
+        <span class="hero-tag" data-aos="fade-down">#OpenToWork</span>
+        <h1 data-aos="fade-up" data-aos-delay="100">Elisa Ronconi</h1>
+        <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
+            <strong>Desarrolladora de Software Full Stack</strong> con bases sólidas en PHP y Laravel. 
+            Especializada en la arquitectura de soluciones escalables y gestión eficiente de datos.
         </p>
-        <div class="hero-btns">
+        <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
             <a href="#proyectos" class="btn btn-blue">Ver Proyectos</a>
             <a href="mailto:elisaronconi28@gmail.com" class="btn btn-green">Contactame</a>
         </div>
@@ -25,71 +26,376 @@
 
     <main class="container" id="proyectos">
         <div class="grid">
-            <article class="card software">
-                <span class="category soft-label">Software Dev</span>
-                <h3>Proyecto KDT</h3>
-                <p>Aplicación de Cadetería para la ciudad de Gualeguaychú</p>
-                <div class="tech-stack">
-                    <span class="tech-badge">PHP</span>
-                    <span class="tech-badge">IONIC</span>
-                    <span class="tech-badge">ANGULAR</span>
-                    <span class="tech-badge">MySQL</span>
-                </div>
-            </article>
 
-            <article class="card software">
-                <span class="category soft-label">QA & Testing</span>
-                <h3>App KAREN (QA Lead)</h3>
-                <p>Liderazgo de pruebas y gestión de issues en Laravel e Ionic.</p>
-                <div class="tech-stack">
-                    <span class="tech-badge">GitHub</span>
-                    <span class="tech-badge">QA</span>
-                </div>
-            </article>
+<article class="card software" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/kdt-home.png" alt="Pantalla de inicio App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-solicitud.png" alt="Nueva Solicitud App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-menu.png" alt="Menú Lateral App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-direccion.png" alt="Registro de direcciones App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-serKdt.png" alt="Ser KDT App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-vehiculo.png" alt="Registrar vehículo App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-enRevision.png" alt="Mensaje de revisión App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-kdt.png" alt="Pagina inicio de KDT App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-pedido.png" alt="Historial de pedido App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-recorrido.png" alt="Vista de recorrido App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-ganancias.png" alt="Pantalla de Ganancias App KDT" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/kdt-historial.png" alt="Historial App KDT" class="card-img-slider">
+            </div>
+            
+            </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <span class="category soft-label">Software Dev</span>
+    <h3>Proyecto KDT</h3>
+    <p>Aplicación de Cadetería. Arquitectura desacoplada: API REST completa y App Móvil de consumo.</p>
+    <div class="tech-stack">
+        <span class="tech-badge">PHP</span>
+        <span class="tech-badge">IONIC</span>
+        <span class="tech-badge">ANGULAR</span>
+        <span class="tech-badge">MySQL</span>
+    </div>
+    
+<button class="link-saber-mas" onclick="document.getElementById('modal-karen').showModal()">
+        + Saber más sobre mi rol
+    </button>
 
-            <article class="card software">
-                <span class="category soft-label">Desarrollo FullStack</span>
-                <h3>PARTICIPO (QA Lead)</h3>
-                <p>Sistema MVC para control de asistencias y reportes automáticos</p>
-                <div class="tech-stack">
-                    <span class="tech-badge">GitHub</span>
-                    <span class="tech-badge">QA</span>
-                </div>
-            </article>
+    <dialog id="modal-karen" class="modal">
+        <div class="modal-header">
+            <h3>Detalles: App KDT</h3>
+            <button class="btn-close" onclick="document.getElementById('modal-karen').close()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p><strong>Contexto:</strong> Proyecto académico colaborativo desarrollado en Kotlin.</p>
+            <p><strong>Mi impacto (QA & Análisis):</strong></p>
+            <ul>
+                <li>Lideré el relevamiento inicial y definí los requerimientos del sistema.</li>
+                <li>Redacté las <em>User Stories</em> (Historias de Usuario) utilizando GitHub Issues para organizar el trabajo de los desarrolladores.</li>
+                <li>Diseñé y ejecuté pruebas manuales (UAT) funcionales para garantizar que la aplicación cumpliera con los criterios de aceptación antes de la entrega final.</li>
+            </ul>
+        </div>
+    </dialog>
 
-            <article class="card web">
-                <span class="category web-label">Web Design</span>
-                <h3>Landing Page Institucional</h3>
-                <p>Rediseño y optimización para centro de día.</p>
-                <div class="tech-stack">
-                    <span class="tech-badge">WordPress</span>
-                    <span class="tech-badge">SEO</span>
-                </div>
-            </article>
+    <a href="https://github.com/MarranoLuna/KDT-Ionic" target="_blank" rel="noopener noreferrer" class="card-link">Ver Frontend ↗</a>
+    <a href="https://github.com/MarranoLuna/KDT" target="_blank" rel="noopener noreferrer" class="card-link">Ver Backend API ↗</a>
+    
 
-            <article class="card web">
-                <span class="category web-label">Web Design</span>
-                <h3>Sitio Profesional Instituto IDEEA</h3>
-                <p>Presencia digital y perfiles de Google Business.</p>
-                <div class="tech-stack">
-                    <span class="tech-badge">GoDaddy</span>
-                    <span class="tech-badge">GMB</span>
-                </div>
-            </article>
+</article>
 
-            <article class="card web">
-                <span class="category web-label">Web Design</span>
-                <h3>Sitio Profesional Médico</h3>
-                <p>Presencia digital y perfiles de Google Business.</p>
-                <div class="tech-stack">
-                    <span class="tech-badge">GoDaddy</span>
-                    <span class="tech-badge">GMB</span>
-                </div>
-            </article>
+
+<article class="card software" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/karen-issues.png" alt="Pantalla Github Issues App KAREN" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/karen-index.png" alt="Pantalla de inicio App KAREN" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/karen-register.png" alt="Registro App Karen" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/karen-menu.png" alt="Menú Lateral App Karen" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/karen-buscador.png" alt="Pantalla Buscador App Karen" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/karen-error.png" alt="Pantalla Error App Karen" class="card-img-slider">
+            </div>
+            </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <span class="category soft-label">QA & Testing</span>
+    <h3>App KAREN (QA Lead)</h3>
+    <p>Proyecto académico colaborativo. Como colaboradora externa, lideré el relevamiento de requisitos, redacción de historias de usuario y ejecución de pruebas funcionales</p>
+    <div class="tech-stack">
+        <span class="tech-badge">GitHub Issues</span>
+        <span class="tech-badge">Análisis de Requisitos</span>
+        <span class="tech-badge">Testing Manual</span>
+        <span class="tech-badge">Kotlin</span>
+        <span class="tech-badge">Android Studio</span>
+
+    </div>
+
+    <button class="link-saber-mas" onclick="document.getElementById('modal-karen').showModal()">
+        + Saber más sobre mi rol
+    </button>
+
+    <dialog id="modal-karen" class="modal">
+        <div class="modal-header">
+            <h3>Detalles: App KAREN</h3>
+            <button class="btn-close" onclick="document.getElementById('modal-karen').close()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p><strong>Contexto:</strong> Proyecto académico colaborativo desarrollado en Kotlin.</p>
+            <p><strong>Mi impacto (QA & Análisis):</strong></p>
+            <ul>
+                <li>Lideré el relevamiento inicial y definí los requerimientos del sistema.</li>
+                <li>Redacté las <em>User Stories</em> (Historias de Usuario) utilizando GitHub Issues para organizar el trabajo de los desarrolladores.</li>
+                <li>Diseñé y ejecuté pruebas manuales (UAT) funcionales para garantizar que la aplicación cumpliera con los criterios de aceptación antes de la entrega final.</li>
+            </ul>
+        </div>
+    </dialog>
+
+    <a href="https://github.com/sedes-karen/karen-and/issues" target="_blank" rel="noopener noreferrer" class="card-link">
+        Ver Gestión y Requisitos ↗ </a>
+
+</article>
+
+<article class="card software" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/constructora-login.png" alt="Pantalla de Login App Constructora" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+            <img src="images/constructora-register.png" alt="Pantalla de Registro App Constructora" class="card-img-slider">
+            </div>
+        
+            </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <span class="category soft-label">Desarrollo FullStack</span>
+    <h3>Constructora Vial</h3>
+    <p>Plataforma integral para la gestión de flotas, asignación de maquinaria y control de mantenimientos preventivos.</p>
+
+    <div class="tech-stack">
+        <span class="tech-badge">Laravel</span>
+        <span class="tech-badge">Tailwind CSS</span>
+        <span class="tech-badge">Vite</span>
+        <span class="tech-badge">MySQL</span>
+    </div>
+    <button class="link-saber-mas" onclick="document.getElementById('modal-vial').showModal()">
+        + Saber más sobre la solución
+    </button>
+    
+<dialog id="modal-vial" class="modal">
+    <div class="modal-header">
+        <h3>Detalles: Sistema Constructora Vial</h3>
+        <button class="btn-close" onclick="document.getElementById('modal-vial').close()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p><strong>Contexto:</strong> Proyecto integrador desarrollado para las cátedras de Programación y Práctica Profesionalizante, conceptualizado como una solución B2B para empresas prestadoras de servicios viales.</p>
+        
+        <p><strong>Mi impacto y desarrollo técnico:</strong></p>
+        <ul>
+            <li><strong>Lógica de Negocio y Análisis:</strong> Estructuración de los procesos operativos críticos de una constructora, digitalizando el control del parque automotor y la maquinaria pesada.</li>
+            <li><strong>Desarrollo Backend (Laravel):</strong> Construcción de una arquitectura MVC moderna, implementando migraciones, seeders y relaciones complejas (Ej: Maquinaria -> Mantenimientos -> Operarios).</li>
+            <li><strong>Módulo de Asignaciones e Informes:</strong> Desarrollo de la lógica para asignar recursos eficientemente y generar reportes de estado, información vital para la toma de decisiones gerenciales.</li>
+            <li><strong>Interfaz de Usuario (Frontend):</strong> Implementación de Tailwind CSS mediante Vite para crear un panel de administración (Dashboard) limpio, responsivo y orientado a la productividad del usuario final.</li>
+        </ul>
+    </div>
+</dialog>
+
+<br>
+
+        <a href="https://github.com/ElisaRonconi/Constructora-Vial" target="_blank" rel="noopener noreferrer" class="card-link">
+            Ver Código en GitHub ↗
+        </a>
+
+     
+  
+</article>
+
+<article class="card software" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/participo-login.png" alt="Pantalla login App PRTICIPO" class="card-img-slider">
+            </div>
+        
+            </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <span class="category soft-label">Desarrollo FullStack</span>
+    <h3>Sistema PARTICIPO</h3>
+    <p>Plataforma MVC para el control de asistencias en el aula. Desarrollo integral desde el diseño de la base de datos hasta la interfaz de usuario.</p>
+    <div class="tech-stack">
+       <span class="tech-badge">PHP</span>
+        <span class="tech-badge">MySQL</span>
+        <span class="tech-badge">Arquitectura MVC</span>
+        <span class="tech-badge">Gestión Académica</span>
+    </div>
+
+    <button class="link-saber-mas" onclick="document.getElementById('modal-participo').showModal()">
+        + Saber más sobre el desarrollo
+    </button>
+
+    <dialog id="modal-participo" class="modal">
+    <div class="modal-header">
+        <h3>Detalles: Sistema PARTICIPO</h3>
+        <button class="btn-close" onclick="document.getElementById('modal-participo').close()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p><strong>Contexto:</strong> Proyecto fundacional de desarrollo individual (2024) enfocado en la digitalización de la gestión de asistencias para el cuerpo docente.</p>
+        
+        <p><strong>Mi impacto y desarrollo técnico:</strong></p>
+        <ul>
+            <li><strong>Modelado de Datos:</strong> Diseñé y construí desde cero la base de datos relacional en MySQL, asegurando la correcta normalización para vincular profesores, alumnos y registros de asistencia.</li>
+            <li><strong>Arquitectura Backend:</strong> Desarrollé la lógica de negocio utilizando PHP puro bajo el patrón de diseño MVC (Modelo-Vista-Controlador), consolidando mis bases en programación orientada a objetos.</li>
+            <li><strong>Enfoque en el Usuario:</strong> Apliqué mi experiencia directa en el ámbito educativo para diseñar un flujo de trabajo que realmente resolviera la carga administrativa del profesor en el aula.</li>
+            <li><strong>Seguridad:</strong> Implementación de sistema de login y validación de sesiones para proteger el acceso a los datos.</li>
+        </ul>
+    </div>
+</dialog>
+
+    <a href="https://github.com/ElisaRonconi/PARTICIPO" target="_blank" rel="noopener noreferrer" class="card-link">
+        Ver Código en GitHub ↗ </a>
+</article>
+           
+          <article class="card web" data-aos="fade-up" data-aos-delay="500">
+   <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/ceba-sobreMi.png" alt="Pantalla Sobre Mí - CEBA" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/ceba-servicios.png" alt="Pantalla Servicos - CEBA" class="card-img-slider">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/ceba-libros.png" alt="Pantalla Libros - CEBA" class="card-img-slider">
+            </div>
+           <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+   </div>
+
+    <span class="category web-label">Web Design & Presencia Digital</span>
+    <h3>CEBA Epilepsia</h3>
+    <p>Sitio institucional médico. Diseño enfocado en la accesibilidad del paciente y posicionamiento en buscadores.</p>
+
+    <div class="tech-stack">
+        <span class="tech-badge">GoDaddy</span>
+        <span class="tech-badge">SEO Local</span>
+        <span class="tech-badge">Google Business</span>
+    </div>
+
+    <button class="link-saber-mas" onclick="document.getElementById('modal-ceba').showModal()">
+        + Saber más sobre este proyecto
+    </button>
+    
+    <div class="card-actions">
+        <a href="https://cebaepilepsia.com.ar/" target="_blank" rel="noopener noreferrer" class="card-link">
+            Visitar Sitio Web ↗
+        </a>
+    </div>
+</article>
+
+
+<article class="card web" data-aos="fade-up" data-aos-delay="600">
+    
+
+     <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <img src="images/ideea-home.png" alt="Sitio Web Instituto IDEEA" class="card-img">
+            </div>
+            <div class="swiper-slide">
+               <img src="images/ideea-escuela.png" alt="Sitio Web Instituto IDEEA" class="card-img">
+            </div>
+            
+           <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+   </div>
+
+    <span class="category web-label">Desarrollo Institucional</span>
+    <h3>Instituto IDEEA</h3>
+    <p>Rediseño y modernización de la presencia digital para el centro de estimulación y educación especial.</p>
+
+    <div class="tech-stack">
+        <span class="tech-badge">WordPress</span>
+        <span class="tech-badge">UX Empático</span>
+    </div>
+
+    <button class="link-saber-mas" onclick="document.getElementById('modal-ideea').showModal()">
+        + Saber más sobre este rediseño
+    </button>
+
+    <dialog id="modal-ceba" class="modal">
+    <div class="modal-header">
+        <h3>Detalles: Sitio Web CEBA</h3>
+        <button class="btn-close" onclick="document.getElementById('modal-ceba').close()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p><strong>Contexto:</strong> Proyecto freelance de diseño, desarrollo y estrategia de presencia digital para un centro de profesionales médicos especializados en Epilepsia.</p>
+        
+        <p><strong>Mi impacto y valor agregado:</strong></p>
+        <ul>
+            <li><strong>UX y Accesibilidad en Salud:</strong> Diseño de una interfaz clara, empática y de navegación intuitiva, estructurada específicamente para facilitar la búsqueda de información a pacientes y familiares.</li>
+            <li><strong>Gestión Integral (CMS & Hosting):</strong> Implementación completa del sitio utilizando WordPress y administración del servidor/dominio a través de GoDaddy, entregando un producto llave en mano autogestionable.</li>
+            <li><strong>Ecosistema Digital:</strong> Configuración e integración del perfil profesional en Google My Business, optimizando el SEO local para asegurar que los pacientes encuentren el centro médico rápidamente en el mapa y en las búsquedas.</li>
+            <li><strong>Ventaja Analítica:</strong> La aplicación de mis conocimientos en biología y el trabajo previo en el ámbito de la salud me permitieron organizar el contenido médico con rigor y empatía, algo que un desarrollador estándar suele pasar por alto.</li>
+        </ul>
+    </div>
+</dialog>
+
+    <dialog id="modal-ideea" class="modal">
+    <div class="modal-header">
+        <h3>Detalles: Web Instituto IDEEA</h3>
+        <button class="btn-close" onclick="document.getElementById('modal-ideea').close()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p><strong>Contexto:</strong> Proyecto integral de digitalización y rediseño de la identidad web para un instituto dedicado a la estimulación y educación de jóvenes y adultos con discapacidad.</p>
+        
+        <p><strong>Mi impacto y valor agregado:</strong></p>
+        <ul>
+            <li><strong>Visión Interna y Resolución de Problemas:</strong> Al conocer profundamente la dinámica administrativa y el trabajo en los talleres del centro de día, pude identificar la necesidad de mejorar la comunicación digital y lideré el rediseño de la web para hacerla más funcional para las familias.</li>
+            <li><strong>Diseño Centrado en el Usuario (UX):</strong> Creación de una arquitectura de información clara, destacando los servicios, profesionales y vías de contacto directo, aplicando un tono empático y accesible acorde a la institución.</li>
+            <li><strong>Gestión de Dominio y Hosting:</strong> Configuración y despliegue del sitio , utilizando WordPress como CMS para permitir futuras actualizaciones ágiles.</li>
+            
+        </ul>
+    </div>
+</dialog>
+    
+    <div class="card-actions">
+        <a href="https://institutoideea.com.ar/" target="_blank" rel="noopener noreferrer" class="card-link">
+            Visitar Sitio Web ↗
+        </a>
+    </div>
+</article>
+
+
         </div>
     </main>
 
-    <section class="about">
+    <section class="about" data-aos="zoom-in">
         <div class="about-content">
             <h2>Trayectoria Híbrida</h2>
             <p>
@@ -103,5 +409,36 @@
         <p>© 2026 - Elisa Ronconi - Gualeguaychú, Entre Ríos</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    // Inicializar Swiper
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,     // Espacio entre slides
+        centeredSlides: true, // La imagen activa queda al centro
+        autoplay: {           // ¡Que se mueva solo!
+            delay: 2500,      // Cada 2.5 segundos
+            disableOnInteraction: false, // Sigue rodando aunque lo toques
+        },
+        pagination: {         // puntitos 
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {         // flechitas
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+      AOS.init({
+        duration: 800, 
+        once: true,    
+        offset: 50     
+      });
+    </script>
 </body>
 </html>
