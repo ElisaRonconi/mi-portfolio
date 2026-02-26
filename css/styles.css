@@ -1,0 +1,8 @@
+/* ================= ARCHIVO PRINCIPAL: styles.css ================= */
+@import url('variables.css');
+@import url('header-hero.css');
+@import url('marquee.css');
+@import url('proyectos.css');
+/* @import url('css/servicios.css');  (Este lo descomentamos cuando lo armemos) */
+
+
