@@ -39,7 +39,7 @@
 }
 
 .hero-content h1 {
-    font-size: 4.5rem;
+    font-size: 3.8rem;
     line-height: 1.1;
     margin-bottom: 10px;
     background: linear-gradient(to right, var(--gren-blue), var(--soft-blue));
@@ -59,18 +59,17 @@
 
 
 .hero-subtitle {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     color: var(--soft-blue);
     margin-bottom: 20px;
     font-weight: 400;
 }
 
 .hero-description {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.7;
     color: var(--slate-gray);
     max-width: 100%;
-
     margin-bottom: 30px;
 }
 
@@ -281,11 +280,11 @@
 
 
     .hero-content h1 {
-        font-size: 2.5rem; 
+        font-size: 2.rem; 
     }
     
     .hero-content h2 { 
-        font-size: 1.4rem; 
+        font-size: 1.2rem; 
     }
 
     .hero-description {
