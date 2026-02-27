@@ -1,30 +1,25 @@
 
-
 .marquee-banner {
     background-color: #5acc82; 
     color: var(--dark-navy);
     padding: 15px 0;
-    overflow: hidden; /* Oculta el texto que se sale de los bordes */
+    overflow: hidden; 
     position: relative;
     z-index: 10;
-    
-    /* El truco de la inclinación inspirado en tu imagen */
     transform: rotate(-2deg) scale(1.05); 
-    /* El scale(1.05) lo ensancha un poquito para que al rotar no se vean las esquinas blancas */
     
-    margin-top: -10px; /* Lo sube un poquito para pegarlo al header */
-    margin-bottom: 60px; /* Espacio antes de que empiecen tus proyectos */
+    margin-top: -10px; 
+    margin-bottom: 60px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .marquee-track {
     display: flex;
     width: max-content;
-    /* Aquí llamamos a la animación que creamos abajo */
     animation: scrollText 20s linear infinite; 
 }
 
-/* Al pasar el mouse, detenemos el movimiento (opcional, pero queda muy pro) */
+
 .marquee-banner:hover .marquee-track {
     animation-play-state: paused;
 }
@@ -32,26 +27,25 @@
 .marquee-text {
     display: flex;
     align-items: center;
-    gap: 2rem; /* Espacio entre las frases */
-    padding-right: 2rem; /* Espacio antes de que arranque la copia */
+    gap: 2rem;
+    padding-right: 2rem; 
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
-/* El asterisco/estrella decorativa */
+
 .marquee-text span {
     font-size: 1.8rem;
     font-weight: 400;
 }
 
-/* --- LA ANIMACIÓN --- */
+
 @keyframes scrollText {
     0% {
         transform: translateX(0);
     }
     100% {
-        /* Se mueve exactamente la mitad de su tamaño, creando el loop perfecto */
         transform: translateX(-50%); 
     }
 }

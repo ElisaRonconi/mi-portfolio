@@ -1,3 +1,13 @@
+html {
+    font-size: 110%; 
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80% !important;
+    max-width: 1800px !important; 
+    margin: 0 auto !important;
+}
 
 
 :root {
@@ -6,7 +16,7 @@
     --blue: #3498db;
     --dark-navy: #1a2a3a;
     --text-gray: #546e7a;
-    --bg-light: #f8fafc;
+    --bg-light: #eef3f7;
     --white: #ffffff;
     --green-blue: #d5dbb82;
     --gren-blue: #d3f7bc;

@@ -11,7 +11,21 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-16x16.png">
 </head>
 <body>
-<header class="hero-section">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Elisa<span class="dot">.</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+            </ul>
+            
+            <a href="mailto:elisaronconi28@gmail.com" class="btn-nav">Hablemos</a>
+        </div>
+    </nav> 
+<header class="hero-section" id="hero">
     <div class="hero-container container">
         
         <div class="hero-content" data-aos="fade-right">
@@ -42,8 +56,21 @@
             </div>
         </div>
 
-        <div class="hero-image-container" data-aos="fade-left" data-aos-delay="200">
+        <div class="hero-image-container" data-aos="fade-left" data-aos-delay="200" id="hero-img-container">
             <div class="hero-image-frame"></div>
+            
+            <div class="hero-sticker sticker-vsc" data-aos="zoom-in" data-aos-delay="500">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code">
+            </div>
+            
+            <div class="hero-sticker sticker-gemini" data-aos="zoom-in" data-aos-delay="700">
+             <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" alt="Google Gemini">
+            </div>
+            
+            <div class="hero-sticker sticker-github" data-aos="zoom-in" data-aos-delay="900">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub">
+            </div>
+            
             <img src="images/profile.png" alt="Elisa Ronconi" class="hero-profile-img">
         </div>
 
@@ -69,17 +96,15 @@
         </div>
     </div><br> <br>
 
+
     <main class="container" id="proyectos">
 
- 
-        
         <div class="section-header" data-aos="fade-up">
             <div class="section-title-row">
                 <h2 class="section-title">Mis Últimos <span class="highlight-text">Proyectos</span></h2>
-                
             </div>
-        </div>
-        <div class="grid">
+        </div><br>
+        <div class="grid"> 
 
             
 <article class="card software" data-aos="fade-up" data-aos-delay="100">
@@ -129,7 +154,7 @@
     </div>
     <span class="category soft-label">Software Dev</span>
     <h3>Proyecto KDT</h3>
-    <p>Aplicación de Cadetería. Arquitectura desacoplada: API REST completa y App Móvil de consumo.</p>
+    <p>Proyecto académico full-stack (2024-2025) que abarca el ciclo de vida completo del software. Incluye desde la fase de análisis y diseño arquitectónico, hasta la construcción de una API REST en PHP y el frontend móvil con Ionic y Angular.</p>
     <div class="tech-stack">
         <span class="tech-badge">PHP</span>
         <span class="tech-badge">IONIC</span>
@@ -137,30 +162,32 @@
         <span class="tech-badge">MySQL</span>
     </div>
     
-<button class="link-saber-mas" onclick="document.getElementById('modal-karen').showModal()">
-        + Saber más sobre mi rol
+    <button class="link-saber-mas" onclick="document.getElementById('modal-kdt').showModal()">
+        + Saber más 
     </button>
 
-    <dialog id="modal-karen" class="modal">
-        <div class="modal-header">
-            <h3>Detalles: App KDT</h3>
-            <button class="btn-close" onclick="document.getElementById('modal-karen').close()">&times;</button>
-        </div>
-        <div class="modal-body">
-            <p><strong>Contexto:</strong> Proyecto académico colaborativo desarrollado en Kotlin.</p>
-            <p><strong>Mi impacto (QA & Análisis):</strong></p>
-            <ul>
-                <li>Lideré el relevamiento inicial y definí los requerimientos del sistema.</li>
-                <li>Redacté las <em>User Stories</em> (Historias de Usuario) utilizando GitHub Issues para organizar el trabajo de los desarrolladores.</li>
-                <li>Diseñé y ejecuté pruebas manuales (UAT) funcionales para garantizar que la aplicación cumpliera con los criterios de aceptación antes de la entrega final.</li>
-            </ul>
-        </div>
-    </dialog>
-
-    <a href="https://github.com/MarranoLuna/KDT-Ionic" target="_blank" rel="noopener noreferrer" class="card-link">Ver Frontend ↗</a>
-    <a href="https://github.com/MarranoLuna/KDT" target="_blank" rel="noopener noreferrer" class="card-link">Ver Backend API ↗</a>
+    <dialog id="modal-kdt" class="modal">
+    <div class="modal-header">
+        <h3>Proyecto KDT</h3>
+        <button class="btn-close" onclick="cerrarModal('modal-kdt')">&times;</button>
+    </div>
     
+    <div class="modal-body">
+        <p>Este sistema de cadetería es el resultado de un proyecto académico integral desarrollado en un equipo de tres personas. Atravesamos colaborativamente todas las etapas de la ingeniería de software, dividiendo el trabajo en dos grandes fases:</p>
+        
+        <ul>
+            <li><strong>Análisis y Diseño (2024):</strong> Realizamos el relevamiento de requisitos y diagramamos todos los esquemas estructurales y la arquitectura del sistema completo.</li>
+            <li><strong>UI/UX y Base de Datos (2025):</strong> Modelado de la base de datos relacional y diseño de interfaces de usuario (prototipado) utilizando Figma y MySQL.</li>
+            <li><strong>Desarrollo Full Stack (2025):</strong> Construcción del backend mediante una API robusta en PHP, y programación del lado del cliente desarrollando una aplicación móvil moderna con Ionic y Angular.</li>
+        </ul>
 
+        <div style="margin-top: 30px;">
+           <a href="https://github.com/MarranoLuna/KDT-Ionic" target="_blank" rel="noopener noreferrer" class="card-link">Ver Frontend ↗</a>
+             <a href="https://github.com/MarranoLuna/KDT" target="_blank" rel="noopener noreferrer" class="card-link">Ver Backend API ↗</a>
+    
+        </div>
+    </div>
+</dialog>
 </article>
 
 
@@ -192,7 +219,7 @@
     </div>
     <span class="category soft-label">QA & Testing</span>
     <h3>App KAREN (QA Lead)</h3>
-    <p>Proyecto académico colaborativo. Como colaboradora externa, lideré el relevamiento de requisitos, redacción de historias de usuario y ejecución de pruebas funcionales</p>
+    <p>Proyecto académico colaborativo. Como colaboradora externa, lideré el relevamiento de requisitos, redacción de historias de usuario y ejecución de pruebas funcionales.</p>
     <div class="tech-stack">
         <span class="tech-badge">GitHub Issues</span>
         <span class="tech-badge">Análisis de Requisitos</span>
@@ -203,7 +230,7 @@
     </div>
 
     <button class="link-saber-mas" onclick="document.getElementById('modal-karen').showModal()">
-        + Saber más sobre mi rol
+        + Saber más 
     </button>
 
     <dialog id="modal-karen" class="modal">
@@ -219,12 +246,11 @@
                 <li>Redacté las <em>User Stories</em> (Historias de Usuario) utilizando GitHub Issues para organizar el trabajo de los desarrolladores.</li>
                 <li>Diseñé y ejecuté pruebas manuales (UAT) funcionales para garantizar que la aplicación cumpliera con los criterios de aceptación antes de la entrega final.</li>
             </ul>
+
+            <a href="https://github.com/sedes-karen/karen-and/issues" target="_blank" rel="noopener noreferrer" class="card-link">
+             Ver Gestión y Requisitos ↗ </a>
         </div>
     </dialog>
-
-    <a href="https://github.com/sedes-karen/karen-and/issues" target="_blank" rel="noopener noreferrer" class="card-link">
-        Ver Gestión y Requisitos ↗ </a>
-
 </article>
 
 <article class="card software" data-aos="fade-up" data-aos-delay="100">
@@ -244,44 +270,43 @@
     </div>
     <span class="category soft-label">Desarrollo FullStack</span>
     <h3>Constructora Vial</h3>
-    <p>Plataforma integral para la gestión de flotas, asignación de maquinaria y control de mantenimientos preventivos.</p>
+    <p>Plataforma B2B web para la gestión integral de flotas y maquinaria. Solución enfocada en la optimización de recursos, rastreo geográfico, asignación de equipos y control de mantenimientos preventivos.</p>
 
-    <div class="tech-stack">
-        <span class="tech-badge">Laravel</span>
-        <span class="tech-badge">Tailwind CSS</span>
-        <span class="tech-badge">Vite</span>
-        <span class="tech-badge">MySQL</span>
-    </div>
+   <div class="tech-stack">
+    <span class="tech-badge">PHP</span>
+    <span class="tech-badge">Laravel 12</span>
+    <span class="tech-badge">Blade</span>
+    <span class="tech-badge">Tailwind CSS</span>
+    <span class="tech-badge">MySQL</span>
+</div>
     <button class="link-saber-mas" onclick="document.getElementById('modal-vial').showModal()">
-        + Saber más sobre la solución
+        + Saber más 
     </button>
     
 <dialog id="modal-vial" class="modal">
     <div class="modal-header">
-        <h3>Detalles: Sistema Constructora Vial</h3>
-        <button class="btn-close" onclick="document.getElementById('modal-vial').close()">&times;</button>
+        <h3>Sistema de Gestión - Constructora Vial</h3>
+        <button class="btn-close" onclick="cerrarModal('modal-vial')">&times;</button>
     </div>
+    
     <div class="modal-body">
-        <p><strong>Contexto:</strong> Proyecto integrador desarrollado para las cátedras de Programación y Práctica Profesionalizante, conceptualizado como una solución B2B para empresas prestadoras de servicios viales.</p>
+        <p>Proyecto integrador desarrollado para las cátedras de Programación y Práctica Profesionalizante, conceptualizado como una solución B2B para empresas prestadoras de servicios viales.</p>
         
-        <p><strong>Mi impacto y desarrollo técnico:</strong></p>
+        <p>El sistema centraliza y optimiza la operativa de la empresa, permitiendo:</p>
+        
         <ul>
-            <li><strong>Lógica de Negocio y Análisis:</strong> Estructuración de los procesos operativos críticos de una constructora, digitalizando el control del parque automotor y la maquinaria pesada.</li>
-            <li><strong>Desarrollo Backend (Laravel):</strong> Construcción de una arquitectura MVC moderna, implementando migraciones, seeders y relaciones complejas (Ej: Maquinaria -> Mantenimientos -> Operarios).</li>
-            <li><strong>Módulo de Asignaciones e Informes:</strong> Desarrollo de la lógica para asignar recursos eficientemente y generar reportes de estado, información vital para la toma de decisiones gerenciales.</li>
-            <li><strong>Interfaz de Usuario (Frontend):</strong> Implementación de Tailwind CSS mediante Vite para crear un panel de administración (Dashboard) limpio, responsivo y orientado a la productividad del usuario final.</li>
+            <li><strong>Gestión de Maquinaria y Obras:</strong> Desarrollo de CRUD completo para administrar flotas, registrar nuevas obras y gestionar las asignaciones de equipos a diferentes proyectos.</li>
+            <li><strong>Geolocalización:</strong> Implementación de rastreo de ubicación por máquina mediante mapas interactivos (Leaflet) con geolocalización por provincias.</li>
+            <li><strong>Mantenimiento Preventivo:</strong> Sistema de alertas automáticas que se disparan cuando una maquinaria supera los 500 km de uso, previniendo fallas y optimizando recursos.</li>
+            <li><strong>Stack Tecnológico:</strong> Interfaz moderna y responsiva desarrollada con <strong>Laravel 12, Tailwind CSS y Flowbite</strong> en el frontend, respaldada por una base de datos <strong>MySQL</strong>.</li>
         </ul>
+
+        <div style="margin-top: 30px;">
+            <a href="https://github.com/ElisaRonconi/Constructora-Vial" target="_blank" class="card-link">Ver Código en GitHub ↗</a>
+        </div>
     </div>
 </dialog>
-
-<br>
-
-        <a href="https://github.com/ElisaRonconi/Constructora-Vial" target="_blank" rel="noopener noreferrer" class="card-link">
-            Ver Código en GitHub ↗
-        </a>
-
-     
-  
+        
 </article>
 
 <article class="card software" data-aos="fade-up" data-aos-delay="100">
@@ -307,7 +332,7 @@
     </div>
 
     <button class="link-saber-mas" onclick="document.getElementById('modal-participo').showModal()">
-        + Saber más sobre el desarrollo
+        + Saber más 
     </button>
 
     <dialog id="modal-participo" class="modal">
@@ -325,14 +350,17 @@
             <li><strong>Enfoque en el Usuario:</strong> Apliqué mi experiencia directa en el ámbito educativo para diseñar un flujo de trabajo que realmente resolviera la carga administrativa del profesor en el aula.</li>
             <li><strong>Seguridad:</strong> Implementación de sistema de login y validación de sesiones para proteger el acceso a los datos.</li>
         </ul>
-    </div>
-</dialog>
 
-    <a href="https://github.com/ElisaRonconi/PARTICIPO" target="_blank" rel="noopener noreferrer" class="card-link">
+        <a href="https://github.com/ElisaRonconi/PARTICIPO" target="_blank" rel="noopener noreferrer" class="card-link">
         Ver Código en GitHub ↗ </a>
+
+    </div>
+    </dialog>
 </article>
-           
-          <article class="card web" data-aos="fade-up" data-aos-delay="500">
+
+
+
+<article class="card web" data-aos="fade-up" data-aos-delay="100">
    <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -361,27 +389,40 @@
     </div>
 
     <button class="link-saber-mas" onclick="document.getElementById('modal-ceba').showModal()">
-        + Saber más sobre este proyecto
+        + Saber más 
     </button>
-    
-    <div class="card-actions">
-        <a href="https://cebaepilepsia.com.ar/" target="_blank" rel="noopener noreferrer" class="card-link">
+    <dialog id="modal-ceba" class="modal">
+    <div class="modal-header">
+        <h3>Detalles: Sitio Web CEBA</h3>
+        <button class="btn-close" onclick="document.getElementById('modal-ceba').close()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p><strong>Contexto:</strong> Proyecto freelance de diseño, desarrollo y estrategia de presencia digital para un centro de profesionales médicos especializados en Epilepsia.</p>
+        
+        <p><strong>Mi impacto y valor agregado:</strong></p>
+        <ul>
+            <li><strong>UX y Accesibilidad en Salud:</strong> Diseño de una interfaz clara, empática y de navegación intuitiva, estructurada específicamente para facilitar la búsqueda de información a pacientes y familiares.</li>
+            <li><strong>Gestión Integral (CMS & Hosting):</strong> Implementación completa del sitio utilizando WordPress y administración del servidor/dominio a través de GoDaddy, entregando un producto llave en mano autogestionable.</li>
+            <li><strong>Ecosistema Digital:</strong> Configuración e integración del perfil profesional en Google My Business, optimizando el SEO local para asegurar que los pacientes encuentren el centro médico rápidamente en el mapa y en las búsquedas.</li>
+            <li><strong>Ventaja Analítica:</strong> La aplicación de mis conocimientos en biología y el trabajo previo en el ámbito de la salud me permitieron organizar el contenido médico con rigor y empatía, algo que un desarrollador estándar suele pasar por alto.</li>
+        </ul>
+
+         <a href="https://cebaepilepsia.com.ar/" target="_blank" rel="noopener noreferrer" class="card-link">
             Visitar Sitio Web ↗
         </a>
     </div>
+</dialog>
 </article>
 
 
-<article class="card web" data-aos="fade-up" data-aos-delay="600">
-    
-
+<article class="card web" data-aos="fade-up" data-aos-delay="100">
      <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-               <img src="images/ideea-home.png" alt="Sitio Web Instituto IDEEA" class="card-img">
+               <img src="images/ideea-home.png" alt="Sitio Web Instituto IDEEA" class="card-img-slider">
             </div>
             <div class="swiper-slide">
-               <img src="images/ideea-escuela.png" alt="Sitio Web Instituto IDEEA" class="card-img">
+               <img src="images/ideea-escuela.png" alt="Sitio Web Instituto IDEEA" class="card-img-slider">
             </div>
             
            <div class="swiper-button-next"></div>
@@ -400,26 +441,10 @@
     </div>
 
     <button class="link-saber-mas" onclick="document.getElementById('modal-ideea').showModal()">
-        + Saber más sobre este rediseño
+        + Saber más 
     </button>
 
-    <dialog id="modal-ceba" class="modal">
-    <div class="modal-header">
-        <h3>Detalles: Sitio Web CEBA</h3>
-        <button class="btn-close" onclick="document.getElementById('modal-ceba').close()">&times;</button>
-    </div>
-    <div class="modal-body">
-        <p><strong>Contexto:</strong> Proyecto freelance de diseño, desarrollo y estrategia de presencia digital para un centro de profesionales médicos especializados en Epilepsia.</p>
-        
-        <p><strong>Mi impacto y valor agregado:</strong></p>
-        <ul>
-            <li><strong>UX y Accesibilidad en Salud:</strong> Diseño de una interfaz clara, empática y de navegación intuitiva, estructurada específicamente para facilitar la búsqueda de información a pacientes y familiares.</li>
-            <li><strong>Gestión Integral (CMS & Hosting):</strong> Implementación completa del sitio utilizando WordPress y administración del servidor/dominio a través de GoDaddy, entregando un producto llave en mano autogestionable.</li>
-            <li><strong>Ecosistema Digital:</strong> Configuración e integración del perfil profesional en Google My Business, optimizando el SEO local para asegurar que los pacientes encuentren el centro médico rápidamente en el mapa y en las búsquedas.</li>
-            <li><strong>Ventaja Analítica:</strong> La aplicación de mis conocimientos en biología y el trabajo previo en el ámbito de la salud me permitieron organizar el contenido médico con rigor y empatía, algo que un desarrollador estándar suele pasar por alto.</li>
-        </ul>
-    </div>
-</dialog>
+    
 
     <dialog id="modal-ideea" class="modal">
     <div class="modal-header">
@@ -436,20 +461,18 @@
             <li><strong>Gestión de Dominio y Hosting:</strong> Configuración y despliegue del sitio , utilizando WordPress como CMS para permitir futuras actualizaciones ágiles.</li>
             
         </ul>
-    </div>
-</dialog>
-    
-    <div class="card-actions">
-        <a href="https://institutoideea.com.ar/" target="_blank" rel="noopener noreferrer" class="card-link">
+
+         <a href="https://institutoideea.com.ar/" target="_blank" rel="noopener noreferrer" class="card-link">
             Visitar Sitio Web ↗
         </a>
     </div>
+</dialog>
 </article>
 
 
         </div>
     </main>
-
+<br><br><br>
     <div class="marquee-banner">
         <div class="marquee-track">
             <div class="marquee-text">
@@ -511,6 +534,24 @@
         once: true,    
         offset: 50     
       });
+    </script>
+
+    <script>
+        //  ABRIR la ventana emergente
+        function abrirModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.showModal(); 
+            }
+        }
+
+        // para CERRAR la ventana emergente
+        function cerrarModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.close(); 
+            }
+        }
     </script>
 </body>
 </html>
