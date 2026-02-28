@@ -15,7 +15,7 @@
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-    <nav class="navbar">
+    <nav id="navbar" class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">Elisa<span class="dot">.</span></a>
             
@@ -538,9 +538,6 @@
         once: true,    
         offset: 50     
       });
-    </script>
-
-    <script>
         //  ABRIR la ventana emergente
         function abrirModal(id) {
             const modal = document.getElementById(id);
@@ -556,6 +553,33 @@
                 modal.close(); 
             }
         }
+
+        // Seleccionamos tu menú de navegación
+const navbar = document.getElementById('navbar');
+
+// 1. Detectar cuando scroleamos hacia abajo
+window.addEventListener('scroll', () => {
+    // Si bajamos más de 80 píxeles...
+    if (window.scrollY > 80) {
+        navbar.classList.add('nav-mini'); // Lo achicamos
+    } else {
+        // Si volvemos bien arriba...
+        navbar.classList.remove('nav-mini'); // Vuelve a la normalidad
+        navbar.classList.remove('nav-abierto'); // Y nos aseguramos de que no quede forzado a estar abierto
+    }
+});
+
+// 2. Detectar el click o toque para volver a abrirlo
+navbar.addEventListener('click', (e) => {
+    // Si el menú está achicado y ADEMÁS está cerrado...
+    if (navbar.classList.contains('nav-mini') && !navbar.classList.contains('nav-abierto')) {
+        e.preventDefault(); // ¡ESTA ES LA MAGIA! Frena el salto hacia arriba de la página
+        navbar.classList.add('nav-abierto'); // Desplegamos el menú
+    }
+    // Si ya está abierto y tocan un enlace, dejamos que fluya normal para que funcione
+});
     </script>
+
+    
 </body>
 </html>

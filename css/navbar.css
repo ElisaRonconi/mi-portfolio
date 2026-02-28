@@ -83,3 +83,44 @@
         padding: 15px 20px;
     }
 }
+
+/* --- TRANSICIÓN SUAVE PARA EL MENÚ --- */
+#navbar {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden; 
+    
+}
+/* --- ESTADO 1: MENÚ ACHICADO (MINI) - PEGADO A LA IZQUIERDA --- */
+#navbar.nav-mini {
+    width: 120px !important;    
+    left: 220px !important; 
+    right: auto !important; 
+    transform: translateX(0) !important; 
+    margin: 0 !important; 
+    background-color: rgba(100, 116, 139, 0.95) !important;
+    cursor: pointer !important;
+}
+
+#navbar.nav-mini ul,
+#navbar.nav-mini .nav-links,
+#navbar.nav-mini .btn-hablemos {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* --- ESTADO 2: MENÚ ACHICADO PERO TOCADO (ABIERTO) - VUELVE AL CENTRO --- */
+#navbar.nav-mini.nav-abierto {
+    width: 80% !important; 
+    max-width: 900px !important;
+    left: 50% !important; 
+    transform: translateX(-50%) !important; 
+}
+#navbar.nav-mini.nav-abierto ul,
+#navbar.nav-mini.nav-abierto .nav-links,
+#navbar.nav-mini.nav-abierto .btn-hablemos {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+    transition: opacity 0.4s ease 0.2s !important; 
+}
