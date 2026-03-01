@@ -1,0 +1,153 @@
+/* ================= SECCIÓN SERVICIOS ================= */
+.servicios-section {
+    background-color: #ebeff4; /* Color de fondo distinto que corta la sección anterior */
+    padding: 100px 0;
+}
+
+/* Encabezado flex para alinear título y botón */
+.servicios-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.servicios-titulos h2 {
+    font-size: 2rem; 
+    margin-top: 10px; 
+    margin-bottom: 0;
+    color: #0f172a; 
+}
+
+
+.servicios-sub {
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resaltado-verde {
+    color: #10b981; 
+}
+
+/* Botón superior derecho */
+.btn-servicios {
+    background: var(--primary-green);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-servicios:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+/* Grilla de 3 columnas */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Estilo de cada Tarjeta */
+.servicio-card {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #10b981; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Círculo del Ícono */
+.servicio-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #ecfdf5; 
+    color: #10b981; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.servicio-card h3 {
+    font-size: 1.4rem;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.servicio-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Enlace "Saber más" */
+.servicio-link {
+    color: #10b981;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.servicio-link:hover {
+    color: #059669; 
+}
+
+@media (max-width: 992px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .servicios-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .servicios-grid {
+        grid-template-columns: 1fr; /* 1 columna en celular */
+    }
+}
+
+@media (max-width: 768px) {
+    .servicios-titulos h2 {
+        font-size: 2.5rem; 
+    }
+}
+
+.servicio-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto; /* Empuja las etiquetas bien abajo */
+}
+
+.servicio-tags span {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+}

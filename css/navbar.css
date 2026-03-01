@@ -93,7 +93,7 @@
 /* --- ESTADO 1: MENÚ ACHICADO (MINI) - PEGADO A LA IZQUIERDA --- */
 #navbar.nav-mini {
     width: 120px !important;    
-    left: 220px !important; 
+    left: 170px !important; 
     right: auto !important; 
     transform: translateX(0) !important; 
     margin: 0 !important; 
