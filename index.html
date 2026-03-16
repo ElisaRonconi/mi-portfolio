@@ -630,6 +630,13 @@
         </div>
     </section>
 
+    <button id="btn-volver-arriba" aria-label="Volver al inicio">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5"></path>
+        <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+</button>
+
     <footer class="footer">
         <p>© 2026 - Elisa Ronconi - Gualeguaychú, Entre Ríos</p>
     </footer>
@@ -702,8 +709,35 @@ navbar.addEventListener('click', (e) => {
     }
  
 });
+
+
+const btnVolverArriba = document.getElementById('btn-volver-arriba');
+
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        btnVolverArriba.classList.add('mostrar');
+    } else {
+        btnVolverArriba.classList.remove('mostrar');
+    }
+});
+
+
+btnVolverArriba.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+    });
+});
     </script>
 
+
+<button id="btn-volver-arriba" aria-label="Volver al inicio">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5"></path>
+        <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+</button>
     
 </body>
 </html>
